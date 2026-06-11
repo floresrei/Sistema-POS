@@ -1,4 +1,4 @@
-package persistencia;
+package sistemapos.persistencia;
 
 import sistemapos.dominio.Usuario;
 import org.junit.jupiter.api.Test;
