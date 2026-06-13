@@ -1,16 +1,16 @@
-package dominio;
+package persistencia;
 
-public class Categoria {
+public class categoria {
 
     private int idCategoria;
     private String nombre;
 
     // Constructor vacío requerido para mapeos genéricos
-    public Categoria() {}
+    public categoria() {}
 
     // Constructor lleno para instanciar rápidamente
-    public Categoria(int idCategoria, String nombre) {
-        this.idCategoria = idCategoria;
+    public categoria(int idcategoria, String nombre) {
+        this.idCategoria = idcategoria;
         this.nombre = nombre;
     }
 
@@ -28,5 +28,13 @@ public class Categoria {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    @Override
+    public String toString() {
+        return "Categoria{" +
+                "idCategoria=" + idCategoria +
+                ", nombre='" + nombre + '\'' +
+                '}';
     }
 }
