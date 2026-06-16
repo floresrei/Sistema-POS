@@ -25,7 +25,7 @@ public class ProductoDAOTest {
             prod.setNombre("Papas Fritas");
             prod.setPrecio(1.25);
             prod.setStock(50);
-            prod.setIdCategoria(cat.getId());
+            prod.setIdCategoria(cat.getIdCategoria());
 
             // 1. Probar inserción
             boolean insertado = productoDAO.insertar(prod);
