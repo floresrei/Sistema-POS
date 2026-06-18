@@ -1,17 +1,22 @@
 package sistemapos;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import sistemapos.Presentación.LoginForm;
+import sistemapos.Presentación.Main;
+import javax.swing.*;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        SwingUtilities.invokeLater(() -> {
+            // Utiliza el hilo de despacho de eventos (Event Dispatch Thread - EDT) para asegurar
+            // que todas las operaciones relacionadas con la interfaz gráfica de usuario (Swing)
+            // se realicen de forma segura y sin bloqueos.
+
+            Main mainForm = new Main(); // Crea una nueva instancia del formulario principal de la aplicación.
+            mainForm.setVisible(false); // IMPORTANTE: El menú principal inicia oculto hasta que el login sea exitoso.
+
+            LoginForm loginForm = new LoginForm(); // Crea una nueva instancia del formulario de inicio de sesión.
+            loginForm.setVisible(true); // Hace visible la ventana de inicio de sesión para solicitar credenciales.
+        });
     }
 }

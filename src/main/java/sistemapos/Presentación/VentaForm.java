@@ -3,7 +3,7 @@ package sistemapos.Presentación;
 import javax.swing.*;
 
 public class
-VentaFrom {
+VentaForm {
     private JTextField textFecha;
     private JTextField textCantidad;
     private JTextField textTotalaPagar;
